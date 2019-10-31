@@ -1,0 +1,4 @@
+ST_NUM: Street number
+ST_NAME: Street name
+OWN_OCCUPIED: Is the residence owner occupied
+NUM_BEDROOMS: Number of bedrooms
