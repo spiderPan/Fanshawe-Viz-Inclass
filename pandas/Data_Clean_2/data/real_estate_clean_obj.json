@@ -1,0 +1,83 @@
+[
+    {
+        "PID": 100001000.0,
+        "ST_NUM": 104.0,
+        "ST_NAME": "PUTNAM",
+        "OWN_OCCUPIED": "Y",
+        "NUM_BEDROOMS": 3.0,
+        "NUM_BATH": "1",
+        "SQ_FT": 1000.0
+    },
+    {
+        "PID": 100002000.0,
+        "ST_NUM": 197.0,
+        "ST_NAME": "LEXINGTON",
+        "OWN_OCCUPIED": "N",
+        "NUM_BEDROOMS": 3.0,
+        "NUM_BATH": "1.5",
+        "SQ_FT": null
+    },
+    {
+        "PID": 100003000.0,
+        "ST_NUM": 125.0,
+        "ST_NAME": "LEXINGTON",
+        "OWN_OCCUPIED": "N",
+        "NUM_BEDROOMS": 2.5,
+        "NUM_BATH": "1",
+        "SQ_FT": 850.0
+    },
+    {
+        "PID": 100004000.0,
+        "ST_NUM": 201.0,
+        "ST_NAME": "BERKELEY",
+        "OWN_OCCUPIED": null,
+        "NUM_BEDROOMS": 1.0,
+        "NUM_BATH": null,
+        "SQ_FT": 700.0
+    },
+    {
+        "PID": null,
+        "ST_NUM": 203.0,
+        "ST_NAME": "BERKELEY",
+        "OWN_OCCUPIED": "Y",
+        "NUM_BEDROOMS": 3.0,
+        "NUM_BATH": "2",
+        "SQ_FT": 1600.0
+    },
+    {
+        "PID": 100006000.0,
+        "ST_NUM": 207.0,
+        "ST_NAME": "BERKELEY",
+        "OWN_OCCUPIED": "Y",
+        "NUM_BEDROOMS": 2.5,
+        "NUM_BATH": "1",
+        "SQ_FT": 800.0
+    },
+    {
+        "PID": 100007000.0,
+        "ST_NUM": 125.0,
+        "ST_NAME": "WASHINGTON",
+        "OWN_OCCUPIED": null,
+        "NUM_BEDROOMS": 2.0,
+        "NUM_BATH": "HURLEY",
+        "SQ_FT": 950.0
+    },
+    {
+        "PID": 100008000.0,
+        "ST_NUM": 213.0,
+        "ST_NAME": "TREMONT",
+        "OWN_OCCUPIED": "Y",
+        "NUM_BEDROOMS": 1.0,
+        "NUM_BATH": "1",
+        "SQ_FT": null
+    },
+    {
+        "PID": 100009000.0,
+        "ST_NUM": 215.0,
+        "ST_NAME": "TREMONT",
+        "OWN_OCCUPIED": "Y",
+        "NUM_BEDROOMS": 2.5,
+        "NUM_BATH": "2",
+        "SQ_FT": 1800.0
+    }
+]
