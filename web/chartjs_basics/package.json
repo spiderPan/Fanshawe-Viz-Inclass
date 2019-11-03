@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "chart.js": "^2.9.2"
+    "browser-sync": "^2.26.7",
+    "chart.js": "^2.9.2",
+    "gulp": "^4.0.2"
   }
 }
