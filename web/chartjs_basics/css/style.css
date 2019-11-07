@@ -1,0 +1,7 @@
+.canvas-wrap {
+    display: flex;
+}
+
+canvas {
+    flex: 50% 20% 1;
+}
