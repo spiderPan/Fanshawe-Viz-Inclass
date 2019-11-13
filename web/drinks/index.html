@@ -8,17 +8,20 @@
     <title>Drinks charts</title>
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     </link>
-    <link href="./css/style.css" rel="stylesheet">
-    </link>
 </head>
 
 <body>
     <main>
-
+        <div class="col-sm">
+            <canvas id="radar-chart" width="500" height="450"></canvas>
+        </div>
+        <div class="col-sm">
+            <canvas id="bubble-chart" width="500" height="450"></canvas>
+        </div>
     </main>
 
     <script src="./node_modules/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="./js/basic_charts.js"></script>
+    <script src="./js/drink_charts.js"></script>
 </body>
 
 </html>
