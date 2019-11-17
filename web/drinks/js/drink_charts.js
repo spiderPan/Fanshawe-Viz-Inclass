@@ -3,7 +3,7 @@
 fetch("/data/json/drinks_by_countries.json")
   .then(resp => resp.json())
   .then(function(data) {
-    var drinks_type = ["beer", "spirit", "wine", "pure alcohol"];
+    var drinks_type = ["beer", "spirit", "wine"];
     var pickedCountry = [];
 
     while (pickedCountry.length < 4) {
@@ -22,8 +22,7 @@ fetch("/data/json/drinks_by_countries.json")
         data: [
           x["beer_servings"],
           x["spirit_servings"],
-          x["wine_servings"],
-          x["total_litres_of_pure_alcohol"]
+          x["wine_servings"]
         ]
       };
     });
