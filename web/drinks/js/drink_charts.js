@@ -19,11 +19,7 @@ fetch("/data/json/drinks_by_countries.json")
         borderColor: random_rgba(),
         pointBorderColor: random_rgba(),
         pointBackgroundColor: random_rgba(),
-        data: [
-          x["beer_servings"],
-          x["spirit_servings"],
-          x["wine_servings"]
-        ]
+        data: [x["beer_servings"], x["spirit_servings"], x["wine_servings"]]
       };
     });
 
@@ -113,3 +109,54 @@ function random_rgba() {
     ")"
   );
 }
+
+fetch("/data/json/drinks_by_continent.json")
+  .then(resp => resp.json())
+  .then(function(data) {
+    console.log(data);
+    var continents = data.map(function(x){
+      return x['continent'];
+    });
+    var wines = [],
+        beers = [],
+        spirit = [];
+    
+    data.forEach(function(x){
+      beers.push(x['beer_servings']);
+      wines.push(x['wine_servings']);
+      spirit.push(x['spirit_servings']);
+    });
+
+    console.log(continents);
+
+    //Grouped Bar Chart
+    new Chart(document.getElementById("bar-chart-grouped"), {
+      type: "bar",
+      data: {
+        labels: continents,
+        datasets: [
+          {
+            label: "Beer",
+            backgroundColor: "#3e95cd",
+            data: beers
+          },
+          {
+            label: "Spirit",
+            backgroundColor: "#8e5ea2",
+            data: spirit
+          },
+          {
+            label: "Wine",
+            backgroundColor: "#000",
+            data: wines
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Population growth (millions)"
+        }
+      }
+    });
+  });
