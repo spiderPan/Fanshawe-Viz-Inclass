@@ -129,7 +129,7 @@ fetch("/data/json/drinks_by_continent.json")
 
     console.log(continents);
 
-    //Grouped Bar Chart
+    //Grouped by Continents
     new Chart(document.getElementById("bar-chart-grouped"), {
       type: "bar",
       data: {
@@ -155,8 +155,40 @@ fetch("/data/json/drinks_by_continent.json")
       options: {
         title: {
           display: true,
-          text: "Population growth (millions)"
+          text: "Alcoohol Consumption By Continents"
         }
       }
     });
+
+    //Grouped by Drinks
+    var dataset = data.map(function(x) {
+      return {
+        label: x["continent"],
+        backgroundColor: getRandomColor(),
+        data: [
+          x["beer_servings"],
+          x["spirit_servings"],
+          x["wine_servings"],
+        ]
+      };
+    });
+    new Chart(document.getElementById("bar-chart-grouped-by-drinks"), {
+      type: "bar",
+      data: {
+        labels: ["beer", "spirit", "wine"],
+        datasets: dataset
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Alcoohol Consumption By Drinks"
+        }
+      }
+    });
+  });
+
+  fetch("/data/json/drinks_by_continent.json")
+  .then(resp => resp.json())
+  .then(function(data) {
+    
   });
