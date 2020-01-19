@@ -13,4 +13,6 @@ class MoviesCmsItem(scrapy.Item):
     # name = scrapy.Field()
     title = scrapy.Field()
     url = scrapy.Field()
+
+    ## Implement the image ??
     pass
