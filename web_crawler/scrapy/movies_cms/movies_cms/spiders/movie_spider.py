@@ -22,4 +22,5 @@ class MovieSpider(CrawlSpider):
         movie_item['url'] = response.url
         movie_item['image'] = response.css('img').attrib['src']
         movie_item['year'] = response.css('p::text')[0].get().strip()
+        movie_item['story'] = response.css('p::text')[1].get().strip()
         yield movie_item
