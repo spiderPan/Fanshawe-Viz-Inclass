@@ -7,6 +7,7 @@
 import pymongo
 
 # from scrapy import log
+from urllib.parse import quote_plus
 from scrapy.utils.project import get_project_settings
 from scrapy.exceptions import DropItem
 
@@ -14,10 +15,9 @@ from scrapy.exceptions import DropItem
 class MoviesCmsPipeline(object):
     def __init__(self):
         settings = get_project_settings()
-        connection = pymongo.MongoClient(
-            settings['MONGODB_SERVER'],
-            settings['MONGODB_PORT']
-        )
+        uri = "mongodb://%s:%s@%s:%s" % (quote_plus(settings['MONGODB_USER']), quote_plus(
+            settings['MONGODB_PASS']), settings['MONGODB_SERVER'], settings['MONGODB_PORT'])
+        connection = pymongo.MongoClient(uri)
         db = connection[settings['MONGODB_DB']]
         self.collection = db[settings['MONGODB_COLLECTION']]
 

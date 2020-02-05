@@ -17,12 +17,14 @@ NEWSPIDER_MODULE = 'movies_cms.spiders'
 
 # Mongo
 # To turn on Mongo
-#ITEM_PIPELINES = {'movies_cms.pipelines.MoviesCmsPipeline': 1}
+ITEM_PIPELINES = {'movies_cms.pipelines.MoviesCmsPipeline': 1}
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 8099
 MONGODB_DB = "movies_cms"
 MONGODB_COLLECTION = "movies"
+MONGODB_USER = "root"
+MONGODB_PASS = "example"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
