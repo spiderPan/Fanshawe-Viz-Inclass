@@ -6,10 +6,9 @@
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 import pymongo
 
-from scrapy import log
+# from scrapy import log
 from scrapy.utils.project import get_project_settings
 from scrapy.exceptions import DropItem
-
 
 
 class MoviesCmsPipeline(object):
@@ -30,6 +29,5 @@ class MoviesCmsPipeline(object):
                 raise DropItem("Missing {0}!".format(data))
         if valid:
             self.collection.insert(dict(item))
-            log.msg("Question added to MongoDB database!",
-                    level=log.DEBUG, spider=spider)
+
         return item

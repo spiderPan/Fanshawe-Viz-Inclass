@@ -5,6 +5,8 @@ services:
   mongo:
     image: mongo
     restart: always
+    ports:
+      - 8099:27017
     environment:
       MONGO_INITDB_DATABASE: movies
       MONGO_INITDB_ROOT_USERNAME: root

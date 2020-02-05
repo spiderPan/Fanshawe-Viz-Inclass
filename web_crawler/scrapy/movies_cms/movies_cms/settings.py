@@ -16,10 +16,11 @@ NEWSPIDER_MODULE = 'movies_cms.spiders'
 
 
 # Mongo
-ITEM_PIPELINES = {'movies_cms.pipelines.MoviesCmsPipeline': 1}
+# To turn on Mongo
+#ITEM_PIPELINES = {'movies_cms.pipelines.MoviesCmsPipeline': 1}
 
 MONGODB_SERVER = "localhost"
-MONGODB_PORT = 8081
+MONGODB_PORT = 8099
 MONGODB_DB = "movies_cms"
 MONGODB_COLLECTION = "movies"
 
