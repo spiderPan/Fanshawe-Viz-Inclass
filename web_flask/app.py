@@ -1,25 +1,17 @@
-import time
-
-import redis
 from flask import Flask
 
+import scrapy
+from scrapy.crawler import CrawlerProcess
+from scrapy.utils.project import get_project_settings
+from fanshawe.spiders.fanshaweSpider import FanshawespiderSpider
+
 app = Flask(__name__)
-cache = redis.Redis(host='redis', port=6379)
-
-
-def get_hit_count():
-    retries = 5
-    while True:
-        try:
-            return cache.incr('hits')
-        except redis.exceptions.ConnectionError as exc:
-            if retries == 0:
-                raise exc
-            retries -= 1
-            time.sleep(0.5)
 
 @app.route('/')
 
-def hellp():
-    count = get_hit_count()
-    return 'Hello World! I have been seen {} times.\n'.format(count)
+def hello():
+    process = CrawlerProcess(get_project_settings())
+
+    # process.crawl(FanshawespiderSpider)
+    # process.start()  # the script will block here until the crawling is finished
+    return 'Start Spider.\n'
