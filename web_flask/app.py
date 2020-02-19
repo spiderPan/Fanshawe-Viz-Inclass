@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_pymongo import PyMongo
 import json
 import requests
@@ -18,6 +18,5 @@ def hello():
     response = requests.get('http://scrapy:9080/crawl.json', params)
     data = json.loads(response.text)
     movies = mongo.db.movies.find({"year": "2013"})
-    result = '\n'.join(
-        '<p><b>{}</b> - {}</p>'.format(item['title'], item['url']) for item in movies)
-    return result
+
+    return render_template("index.html", movies=movies)
