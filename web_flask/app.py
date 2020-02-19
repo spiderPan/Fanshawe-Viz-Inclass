@@ -19,6 +19,10 @@ def show_movie_by_year(year):
     movies = mongo.db.movies.find({"year": year})
     return render_template("index.html", movies=movies)
 
+@app.route('/admin')
+def admin():
+    return render_template("dashboard.html")
+
 @app.route('/fetch')
 def fetch():
     params = {
