@@ -11,9 +11,13 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    movies = mongo.db.movies.find({"year": "2013"})
+    movies = mongo.db.movies.find()
     return render_template("index.html", movies=movies)
 
+@app.route('/year/<year>')
+def show_movie_by_year(year):
+    movies = mongo.db.movies.find({"year": year})
+    return render_template("index.html", movies=movies)
 
 @app.route('/fetch')
 def fetch():
