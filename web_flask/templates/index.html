@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Flask Dashboard</title>
   </head>
+
   <body>
     <div>
-      <ul>
-        {% for movie in movies %}
-        <li>
-            Title:{{ movie.title }}<br>
-            Year:{{ movie.year }}<br>
-            Sotry:{{ movie.story }}<br>
-        </li>
-        {% endfor %}
-      </ul>
+      {% if message %}
+        <h3>{{ message }}</h3>
+      {% endif %}
+      {% if movies %}
+        <ul>
+          {% for movie in movies %}
+            <li>
+              Title:{{ movie.title }}<br/>
+              Year:{{ movie.year }}<br/>
+              Sotry:{{ movie.story }}<br/>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
     </div>
   </body>
+
 </html>
