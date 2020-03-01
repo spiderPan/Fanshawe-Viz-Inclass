@@ -16,5 +16,5 @@ class MoviesCmsItem(scrapy.Item):
     image = scrapy.Field()
     year = scrapy.Field()
     story = scrapy.Field()
-    ## Implement the image ??
+    time = scrapy.Field()
     pass

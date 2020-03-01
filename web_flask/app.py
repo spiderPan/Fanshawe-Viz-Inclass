@@ -17,7 +17,7 @@ def hello():
     }
     response = requests.get('http://scrapy:9080/crawl.json', params)
     data = json.loads(response.text)
-    movies = mongo.db.movies.find({"year": "2013"})
+    movies = mongo.db.movies.find()
     result = '\n'.join(
         '<p><b>{}</b> - {}</p>'.format(item['title'], item['url']) for item in movies)
     return result
