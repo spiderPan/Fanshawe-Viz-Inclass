@@ -16,4 +16,5 @@ class FanshaweItem(scrapy.Item):
     code = scrapy.Field()
     duration = scrapy.Field()
     name = scrapy.Field()
+    time = scrapy.Field()
     pass
