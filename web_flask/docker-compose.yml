@@ -20,7 +20,7 @@ services:
     image: mongo
     restart: always
     ports:
-      - 8099:27017
+      - 8049:27017
     volumes:
       - ./data/001_users.js:/docker-entrypoint-initdb.d/001_users.js:ro
       - mongodb:/data/db
@@ -34,7 +34,7 @@ services:
     image: mongo-express
     restart: always
     ports:
-      - 8081:8081
+      - 8061:8081
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: example

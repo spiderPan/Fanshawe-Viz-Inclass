@@ -9,7 +9,7 @@ import pymongo
 from urllib.parse import quote_plus
 from scrapy.utils.project import get_project_settings
 from scrapy.exceptions import DropItem
-
+import time
 
 class MoviesCmsPipeline(object):
     def __init__(self):
@@ -20,6 +20,9 @@ class MoviesCmsPipeline(object):
         db = connection[settings['MONGODB_DB']]
         self.collection = db[settings['MONGODB_COLLECTION']]
 
+    def open_spider(self, spider):
+        self.time = str(int(time.time()))
+
     def process_item(self, item, spider):
         valid = True
         for data in item:
@@ -27,6 +30,7 @@ class MoviesCmsPipeline(object):
                 valid = False
                 raise DropItem("Missing {0}!".format(data))
         if valid:
+            item['time'] = self.time
             self.collection.insert(dict(item))
 
         return item

@@ -6,7 +6,7 @@ from scrapy.spiders import CrawlSpider, Rule
 from fanshawe.items import FanshaweItem
 
 class FanshawespiderSpider(CrawlSpider):
-    name = 'fanshaweSpider'
+    name = 'fanshawe'
     allowed_domains = ['fanshawec.ca']
     start_urls = ['https://www.fanshawec.ca/programs-and-courses']
 

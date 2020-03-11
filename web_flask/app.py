@@ -1,8 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask
+from flask import render_template
 from flask_pymongo import PyMongo
 import json
 import requests
 from urllib.parse import quote_plus
+from datetime import datetime
+import pytz
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://admin:123@mongo:27017/movies_cms"
@@ -31,4 +34,24 @@ def fetch():
     }
     response = requests.get('http://scrapy:9080/crawl.json', params)
     data = json.loads(response.text)
-    return render_template("index.html", message='Fetched New Data!')
+    movies = mongo.db.movies.find()
+    result = '\n'.join(
+        '<p><b>{}</b> - {}</p>'.format(item['title'], item['url']) for item in movies)
+    return result
+
+
+@app.route('/time')
+def chart():
+    legend = 'Crawling Movie Count'
+    labels = []
+    values = []
+    for time in mongo.db.movies.distinct('time'):
+        labels.append(datetime.fromtimestamp(int(time), pytz.timezone(
+            'America/Toronto')))
+        values.append(mongo.db.movies.find({"time": time}).count())
+    return render_template('time_chart.html', values=values, labels=labels, legend=legend)
+
+
+@app.route('/')
+def hello():
+    return 'This is a Flask CMS'
