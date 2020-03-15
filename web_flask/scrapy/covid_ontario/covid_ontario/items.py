@@ -8,7 +8,22 @@
 import scrapy
 
 
-class CovidOntarioItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+class CovidOntarioStatusItem(scrapy.Item):
+    negative = scrapy.Field()
+    pending = scrapy.Field()
+    confirmed = scrapy.Field()
+    resolved = scrapy.Field()
+    total = scrapy.Field()
+    date = scrapy.Field()
+    pass
+
+
+class CovidOntarioCasesItem(scrapy.Item):
+    case_number = scrapy.Field()
+    age_and_gender = scrapy.Field()
+    public_health_unit = scrapy.Field()
+    hospital = scrapy.Field()
+    transmission = scrapy.Field()
+    status = scrapy.Field()
+    date = scrapy.Field()
     pass
