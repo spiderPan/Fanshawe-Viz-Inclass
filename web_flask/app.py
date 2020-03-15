@@ -13,15 +13,11 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-<<<<<<< HEAD
     return render_template('home.html')
 
 @app.route('/bar-chart')
 def bar_chart():
     return render_template('barchart.html')
-=======
-    return render_template('index.html')
->>>>>>> add world data
 
 
 @app.route('/fetch')

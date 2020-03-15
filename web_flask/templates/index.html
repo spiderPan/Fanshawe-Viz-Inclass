@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <script src="/static/node_modules/echarts-leaflet/dist/echarts-leaflet.js"></script>
     <script src="/static/node_modules/jquery/dist/jquery.js"></script>
 </head>
+
 <body>
     <div id="main" style="width: 1200px; height: 600px;"></div>
 
@@ -20,69 +22,71 @@
         var chart = echarts.init(dom);
 
         // https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv
-        $.get('/static/data/time_series_19-covid-Confirmed.csv', function (data) {
-            var lines = data.split('\n');
+        fetch("/static/data/time_series_19-covid-Confirmed.csv")
+            .then(resp => resp.text())
+            .then(function (data) {
+                var lines = data.split('\n');
 
-            var result = [];
-            for (var i = 1; i < lines.length; ++i) {
-                var columns = lines[i].split(',');
+                var result = [];
+                for (var i = 1; i < lines.length; ++i) {
+                    var columns = lines[i].split(',');
 
-                for (var j = 4; j < columns.length; ++j) {
-                    var value = [
-                        columns[3],
-                        columns[2],
-                        columns[j],
-                        columns[0] + ' ' + columns[1]
-                    ];
-                    var id = j - 4;
-                    if (result[id]) {
-                        result[id].push(value);
-                    }
-                    else {
-                        result[id] = [value];
+                    for (var j = 4; j < columns.length; ++j) {
+                        var value = [
+                            columns[3],
+                            columns[2],
+                            columns[j],
+                            columns[0] + ' ' + columns[1]
+                        ];
+                        var id = j - 4;
+                        if (result[id]) {
+                            result[id].push(value);
+                        }
+                        else {
+                            result[id] = [value];
+                        }
                     }
                 }
-            }
 
-            var options = result.map(function (day) {
-                return {
-                    series: {
-                        data: day
-                    }
-                };
-            })
+                var options = result.map(function (day) {
+                    return {
+                        series: {
+                            data: day
+                        }
+                    };
+                })
 
-            chart.setOption({
-                timeline: {
-                    axisType: 'category',
-                    data: lines[0].split(',').slice(4),
-                    autoPlay: true,
-                    playInterval: 500,
-                    symbolSize: 4,
-                    tooltip: {
-                        formatter: function (params) {
-                            return params.name;
+                chart.setOption({
+                    timeline: {
+                        axisType: 'category',
+                        data: lines[0].split(',').slice(4),
+                        autoPlay: true,
+                        playInterval: 500,
+                        symbolSize: 4,
+                        tooltip: {
+                            formatter: function (params) {
+                                return params.name;
+                            }
+                        },
+                        itemStyle: {
+                            color: '#ccc'
+                        },
+                        lineStyle: {
+                            color: '#eee'
+                        },
+                        label: {
+                            color: '#999'
+                        },
+                        checkpointStyle: {
+                            color: 'red'
+                        },
+                        controlStyle: {
+                            borderColor: '#bbb'
                         }
                     },
-                    itemStyle: {
-                        color: '#ccc'
-                    },
-                    lineStyle: {
-                        color: '#eee'
-                    },
-                    label: {
-                        color: '#999'
-                    },
-                    checkpointStyle: {
-                        color: 'red'
-                    },
-                    controlStyle: {
-                        borderColor: '#bbb'
-                    }
-                },
-                options: options
-            })
-        });
+                    options: options
+                })
+            });
 
         chart.setOption({
             baseOption: {
@@ -127,4 +131,5 @@
         });
     </script>
 </body>
+
 </html>
