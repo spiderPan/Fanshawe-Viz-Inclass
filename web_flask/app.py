@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_pymongo import PyMongo
 import json
 import requests
@@ -12,7 +12,11 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    return '<h1>This is a Flask CMS</h1>'
+    return render_template('home.html')
+
+@app.route('/bar-chart')
+def bar_chart():
+    return render_template('barchart.html')
 
 
 @app.route('/fetch')
