@@ -1,6 +1,10 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "bootstrap": "^4.4.1",
+=======
+    "bootstrap": "4.4.0",
+>>>>>>> 9e748d0eb6945800d3f02a7584236d40dfbf0130
     "chart.js": "^2.9.3",
     "feather-icons": "^4.26.0",
     "jquery": "^3.4.1"
