@@ -39,34 +39,40 @@ ROBOTSTXT_OBEY = True
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
+# DEFAULT_REQUEST_HEADERS = {
 #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #   'Accept-Language': 'en',
-#}
+# }
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
+# SPIDER_MIDDLEWARES = {
 #    'covid_ontario.middlewares.CovidOntarioSpiderMiddleware': 543,
-#}
+# }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
+# DOWNLOADER_MIDDLEWARES = {
 #    'covid_ontario.middlewares.CovidOntarioDownloaderMiddleware': 543,
-#}
+# }
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
+# EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+# }
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'covid_ontario.pipelines.CovidOntarioPipeline': 300,
-#}
+ITEM_PIPELINES = {'movies_cms.pipelines.MongoDBPipeline': 1}
+
+MONGODB_SERVER = "mongo"
+MONGODB_PORT = 27017
+MONGODB_DB = "covid_ontario"
+MONGODB_CASE_COLLECTION = "cases"
+MONGODB_STATUS_COLLECTION = "status"
+MONGODB_USER = "root"
+MONGODB_PASS = "example"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
