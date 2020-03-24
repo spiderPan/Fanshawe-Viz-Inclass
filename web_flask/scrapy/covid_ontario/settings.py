@@ -64,7 +64,7 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {'movies_cms.pipelines.MongoDBPipeline': 1}
+#ITEM_PIPELINES = {'covid_ontario.pipelines.MongoDBPipeline': 1}
 
 MONGODB_SERVER = "mongo"
 MONGODB_PORT = 27017

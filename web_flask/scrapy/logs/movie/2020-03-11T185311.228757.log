@@ -1,0 +1,229 @@
+2020-03-11 18:53:11 [scrapy] DEBUG: Crawled (404) <GET https://movie.thepan.cn/robots.txt> (referer: None)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn> (referer: None)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=1> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=15> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=1>
+{'image': 'images/guardians2.jpg',
+ 'story': 'The Guardians must fight to keep their newfound family together as '
+          'they unravel the mystery of Peter Quill’s true parentage.',
+ 'title': 'Guardians of the Galaxy Vol. 2',
+ 'url': 'https://movie.thepan.cn/details.php?id=1',
+ 'year': '2017'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=19> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=14> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=22> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=15>
+{'image': 'images/force.jpg',
+ 'story': 'Three decades after the Empire’s defeat, a new threat arises in the '
+          'militant First Order. Stormtrooper defector Finn and spare parts '
+          'scavenger Rey are caught up in the Resistance’s search for the '
+          'missing Luke Skywalker.',
+ 'title': 'Star Wars: The Force Awakens',
+ 'url': 'https://movie.thepan.cn/details.php?id=15',
+ 'year': '2015'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=20> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=21> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=18> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=17> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=16> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=12> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=13> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=10> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=11> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=19>
+{'image': 'images/gravity.jpg',
+ 'story': 'Two astronauts work together to survive after an accident which '
+          'leaves them alone in space.',
+ 'title': 'Gravity',
+ 'url': 'https://movie.thepan.cn/details.php?id=19',
+ 'year': '2013'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=14>
+{'image': 'images/colonia.jpg',
+ 'story': 'A young woman’s desperate search for her abducted boyfriend that '
+          'draws her into the infamous Colonia Dignidad, a sect nobody has '
+          'ever escaped from.',
+ 'title': 'Colonia',
+ 'url': 'https://movie.thepan.cn/details.php?id=14',
+ 'year': '2015'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=22>
+{'image': 'images/cover_default.jpg',
+ 'story': 'Vietnamese dabest',
+ 'title': 'Co Ba Sai Gon',
+ 'url': 'https://movie.thepan.cn/details.php?id=22',
+ 'year': '2017'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=9> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=7> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=8> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=20>
+{'image': 'images/pi.jpg',
+ 'story': 'A young man who survives a disaster at sea is hurtled into an epic '
+          'journey of adventure and discovery. While cast away, he forms an '
+          'unexpected connection with another survivor: a fearsome Bengal '
+          'tiger.',
+ 'title': 'Life of Pi',
+ 'url': 'https://movie.thepan.cn/details.php?id=20',
+ 'year': '2012'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=6> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=5> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=4> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=21>
+{'image': 'images/silver.jpg',
+ 'story': 'After a stint in a mental institution, former teacher Pat Solitano '
+          'moves back in with his parents and tries to reconcile with his '
+          'ex-wife. Things get more challenging when Pat meets Tiffany, a '
+          'mysterious girl with problems of her own.',
+ 'title': 'Silver Linings Playbook',
+ 'url': 'https://movie.thepan.cn/details.php?id=21',
+ 'year': '2012'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=18>
+{'image': 'images/donjon.jpg',
+ 'story': 'A New Jersey guy dedicated to his family, friends, and church, '
+          'develops unrealistic expectations from watching porn and works to '
+          'find happiness and intimacy with his potential true love.',
+ 'title': 'Don Jon',
+ 'url': 'https://movie.thepan.cn/details.php?id=18',
+ 'year': '2013'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=17>
+{'image': 'images/guardians.jpg',
+ 'story': 'A group of intergalactic criminals are forced to work together to '
+          'stop a fanatical warrior from taking control of the universe.',
+ 'title': 'Guardians of the Galaxy',
+ 'url': 'https://movie.thepan.cn/details.php?id=17',
+ 'year': '2014'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=3> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Crawled (200) <GET https://movie.thepan.cn/details.php?id=2> (referer: https://movie.thepan.cn)
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=16>
+{'image': 'images/whiplash.jpg',
+ 'story': 'A promising young drummer enrolls at a cut-throat music '
+          'conservatory where his dreams of greatness are mentored by an '
+          "instructor who will stop at nothing to realize a student's "
+          'potential.',
+ 'title': 'Whiplash',
+ 'url': 'https://movie.thepan.cn/details.php?id=16',
+ 'year': '2014'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=12>
+{'image': 'images/brooklyn.jpg',
+ 'story': 'An Irish immigrant lands in 1950s Brooklyn, where she quickly falls '
+          'into a romance with a local. When her past catches up with her, '
+          'however, she must choose between two countries and the lives that '
+          'exist within.',
+ 'title': 'Brooklyn',
+ 'url': 'https://movie.thepan.cn/details.php?id=12',
+ 'year': '2015'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=13>
+{'image': 'images/walk.jpg',
+ 'story': 'In 1974, high-wire artist Philippe Petit recruits a team of people '
+          'to help him realize his dream: to walk the immense void between the '
+          'World Trade Center towers.',
+ 'title': 'The Walk',
+ 'url': 'https://movie.thepan.cn/details.php?id=13',
+ 'year': '2015'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=10>
+{'image': 'images/trolls.jpg',
+ 'story': 'After the Bergens invade Troll Village, Poppy, the happiest Troll '
+          'ever born, and the curmudgeonly Branch set off on a journey to '
+          'rescue her friends.',
+ 'title': 'Trolls',
+ 'url': 'https://movie.thepan.cn/details.php?id=10',
+ 'year': '2016'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=11>
+{'image': 'images/revenant.jpg',
+ 'story': 'A frontiersman on a fur trading expedition in the 1820s fights for '
+          'survival after being mauled by a bear and left for dead by members '
+          'of his own hunting team.',
+ 'title': 'The Revenant',
+ 'url': 'https://movie.thepan.cn/details.php?id=11',
+ 'year': '2015'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=9>
+{'image': 'images/eddie.jpg',
+ 'story': 'The story of Eddie Edwards, the notoriously tenacious British '
+          'underdog ski jumper who charmed the world at the 1988 Winter '
+          'Olympics.',
+ 'title': 'Eddie the Eagle',
+ 'url': 'https://movie.thepan.cn/details.php?id=9',
+ 'year': '2016'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=7>
+{'image': 'images/deadpool.jpg',
+ 'story': 'A fast-talking mercenary with a morbid sense of humor is subjected '
+          'to a rogue experiment that leaves him with accelerated healing '
+          'powers and a quest for revenge.',
+ 'title': 'Deadpool',
+ 'url': 'https://movie.thepan.cn/details.php?id=7',
+ 'year': '2016'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=8>
+{'image': 'images/arrival.jpg',
+ 'story': 'When twelve mysterious spacecraft appear around the world, '
+          'linguistics professor Louise Banks is tasked with interpreting the '
+          'language of the apparent alien visitors.',
+ 'title': 'Arrival',
+ 'url': 'https://movie.thepan.cn/details.php?id=8',
+ 'year': '2016'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=6>
+{'image': 'images/hacksaw.jpg',
+ 'story': 'WWII American Army Medic Desmond T. Doss, who served during the '
+          'Battle of Okinawa, refuses to kill people, and becomes the first '
+          'man in American history to receive the Medal of Honor without '
+          'firing a shot.',
+ 'title': 'Hacksaw Ridge',
+ 'url': 'https://movie.thepan.cn/details.php?id=6',
+ 'year': '2016'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=5>
+{'image': 'images/beauty.jpg',
+ 'story': 'An adaptation of the fairy tale about a monstrous-looking prince '
+          'and a young woman who fall in love.',
+ 'title': 'Beauty and the Beast',
+ 'url': 'https://movie.thepan.cn/details.php?id=5',
+ 'year': '2017'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=4>
+{'image': 'images/okja.jpg',
+ 'story': 'Meet Mija, a young girl who risks everything to prevent a powerful, '
+          'multi-national company from kidnapping her best friend - a '
+          'fascinating animal named Okja.',
+ 'title': 'Okja',
+ 'url': 'https://movie.thepan.cn/details.php?id=4',
+ 'year': '2017'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=3>
+{'image': 'images/logan.jpg',
+ 'story': 'In the near future, a weary Logan cares for an ailing Professor X, '
+          'somewhere on the Mexican border. However, Logan’s attempts to hide '
+          'from the world, and his legacy, are upended when a young mutant '
+          'arrives, pursued by dark forces.',
+ 'title': 'Logan',
+ 'url': 'https://movie.thepan.cn/details.php?id=3',
+ 'year': '2017'}
+2020-03-11 18:53:12 [scrapy] DEBUG: Scraped from <200 https://movie.thepan.cn/details.php?id=2>
+{'image': 'images/dunkirk.jpg',
+ 'story': 'Allied soldiers from Belgium, the British Empire and France are '
+          'surrounded by the German army and evacuated during a fierce battle '
+          'in World War II.',
+ 'title': 'Dunkirk',
+ 'url': 'https://movie.thepan.cn/details.php?id=2',
+ 'year': '2017'}
+2020-03-11 18:53:12 [scrapy] INFO: Closing spider (finished)
+2020-03-11 18:53:12 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7403,
+ 'downloader/request_count': 24,
+ 'downloader/request_method_count/GET': 24,
+ 'downloader/response_bytes': 19081,
+ 'downloader/response_count': 24,
+ 'downloader/response_status_count/200': 23,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 1.248146,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 3, 11, 18, 53, 12, 830342),
+ 'item_scraped_count': 22,
+ 'log_count/DEBUG': 46,
+ 'log_count/INFO': 7,
+ 'memusage/max': 55439360,
+ 'memusage/startup': 55439360,
+ 'request_depth_max': 1,
+ 'response_received_count': 24,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 23,
+ 'scheduler/dequeued/memory': 23,
+ 'scheduler/enqueued': 23,
+ 'scheduler/enqueued/memory': 23,
+ 'start_time': datetime.datetime(2020, 3, 11, 18, 53, 11, 582196)}
+2020-03-11 18:53:12 [scrapy] INFO: Spider closed (finished)

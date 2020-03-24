@@ -23,7 +23,7 @@ def bar_chart():
 @app.route('/fetch')
 def fetch():
     params = {
-        'spider_name': 'movie',
+        'spider_name': 'ontario',
         'start_requests': True
     }
     response = requests.get('http://scrapy:9080/crawl.json', params)

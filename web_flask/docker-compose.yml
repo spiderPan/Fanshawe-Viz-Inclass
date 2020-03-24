@@ -1,6 +1,8 @@
 version: "3.3"
 services:
   scrapy:
+    ports:
+      - 9081:9080
     build:
       context: ./scrapy/
       dockerfile: ../.docker/scrapy/Dockerfile
@@ -26,7 +28,7 @@ services:
       - mongodb:/data/db
       - mongodb_config:/data/configdb
     environment:
-      MONGO_INITDB_DATABASE: movies_cms
+      MONGO_INITDB_DATABASE: covid_ontario
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
 
