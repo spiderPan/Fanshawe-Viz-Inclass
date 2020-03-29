@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from covid_ontario.items import CovidOntarioStatusItem, CovidOntarioCasesItem
+from covid_ontario.items import CovidOntarioStatusItem
 from scrapy.utils.response import open_in_browser
 import datetime
 
