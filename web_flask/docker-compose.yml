@@ -9,6 +9,16 @@ services:
     volumes:
       - ./scrapy:/code
 
+  node:
+    image: node:12
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./static:/home/node/app
+    command: "yarn"
+
   web:
     build:
       context: ./
