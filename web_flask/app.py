@@ -11,13 +11,20 @@ app.config['MONGO_URI'] = 'mongodb://admin:123@mongo:27017/covid_ontario'
 mongo = PyMongo(app)
 
 
+@app.template_filter('strftime')
+def _jinja2_filter_datetime(date, fmt=None):
+    date = datetime.fromtimestamp(date)
+    native = date.replace(tzinfo=None)
+    format = '%B %d, %Y at %I:%M %p'
+    return native.strftime(format)
+
+
 @app.route('/')
 def index():
     status = mongo.db.status
     status_data = []
     for s in status.find():
-        date_object = datetime.fromtimestamp(s['date'])
-        status_data.append({'date': date_object.isoformat(),
+        status_data.append({'date': s['date'],
                             'negative': s['negative'],
                             'pending': s['pending'],
                             'confirmed': s['confirmed'],
@@ -39,4 +46,5 @@ def fetch():
         'start_requests': True
     }
     response = requests.get('http://scrapy:9080/crawl.json', params)
-    return response.text
+    fetch_result = json.loads(response.text)
+    return render_template('fetch.html', content=fetch_result)

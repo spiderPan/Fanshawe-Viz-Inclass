@@ -34,7 +34,7 @@
                 {% if ontario_data %} {% for daily_data in ontario_data %}
                 <tr>
                     <td>{{loop.index}}</td>
-                    <td>{{ daily_data['date'] }}</td>
+                    <td>{{ daily_data['date']|strftime }}</td>
                     <td>{{ daily_data['negative'] }}</td>
                     <td>{{ daily_data['pending'] }}</td>
                     <td>{{ daily_data['confirmed'] }}</td>
