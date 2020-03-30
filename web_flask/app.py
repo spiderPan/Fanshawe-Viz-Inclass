@@ -25,10 +25,10 @@ def index():
     status_data = []
     for s in status.find():
         status_data.append({'date': s['date'],
-                            'negative': s['negative'],
-                            'pending': s['pending'],
+                            'deceased': s['deceased'],
                             'confirmed': s['confirmed'],
                             'resolved': s['resolved'],
+                            'pending': s['pending'],
                             'total': s['total']
                             })
     return render_template('home.html', ontario_data=status_data)

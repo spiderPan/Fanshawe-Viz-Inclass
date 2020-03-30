@@ -9,9 +9,9 @@ import scrapy
 
 
 class CovidOntarioStatusItem(scrapy.Item):
-    negative = scrapy.Field()
-    pending = scrapy.Field()
+    deceased = scrapy.Field()
     confirmed = scrapy.Field()
+    pending = scrapy.Field()
     resolved = scrapy.Field()
     total = scrapy.Field()
     date = scrapy.Field()

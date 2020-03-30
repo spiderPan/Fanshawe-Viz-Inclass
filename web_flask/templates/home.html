@@ -23,10 +23,10 @@
                 <tr>
                     <th>#</th>
                     <th>Date</th>
-                    <th>Negative</th>
-                    <th>Pending</th>
+                    <th>Deceased</th>
                     <th>Confirmed</th>
                     <th>Resolved</th>
+                    <th>Pending</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -34,11 +34,11 @@
                 {% if ontario_data %} {% for daily_data in ontario_data %}
                 <tr>
                     <td>{{loop.index}}</td>
-                    <td>{{ daily_data['date']|strftime }}</td>
-                    <td>{{ daily_data['negative'] }}</td>
-                    <td>{{ daily_data['pending'] }}</td>
+                    <td>{{ daily_data['date'] }}</td>
+                    <td>{{ daily_data['deceased'] }}</td>
                     <td>{{ daily_data['confirmed'] }}</td>
                     <td>{{ daily_data['resolved'] }}</td>
+                    <td>{{ daily_data['pending'] }}</td>
                     <td>{{ daily_data['total'] }}</td>
                 </tr>
                 {% endfor %} {% endif %}
