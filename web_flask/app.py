@@ -7,13 +7,25 @@ import pytz
 
 app = Flask(__name__,
             static_folder='./static')
-app.config['MONGO_URI'] = 'mongodb://admin:123@mongo:27017/movie_cms'
+app.config['MONGO_URI'] = 'mongodb://admin:123@mongo:27017/covid_ontario'
 mongo = PyMongo(app)
 
 
 @app.route('/')
 def index():
-    return render_template('home.html')
+    status = mongo.db.status
+    status_data = []
+    for s in status.find():
+        date_object = datetime.fromtimestamp(s['date'])
+        status_data.append({'date': date_object.isoformat(),
+                            'negative': s['negative'],
+                            'pending': s['pending'],
+                            'confirmed': s['confirmed'],
+                            'resolved': s['resolved'],
+                            'total': s['total']
+                            })
+    return render_template('home.html', ontario_data=status_data)
+
 
 @app.route('/bar-chart')
 def bar_chart():
