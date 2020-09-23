@@ -11,10 +11,10 @@ except:
 import pandas as pd
 
 # %% Import Data
-flights = pd.read_csv('./data/raw/Cleaned_2018_Flights.csv')
+flights = pd.read_csv('./data/Cleaned_2018_Flights.csv')
 flights.head()
 # %% Import Airport Data
-airports = pd.read_csv('./data/raw/GlobalAirportDatabase.csv',
+airports = pd.read_csv('./data/GlobalAirportDatabase.csv',
                        names=[
                            'Airport ID',
                            'Name', 'City',
