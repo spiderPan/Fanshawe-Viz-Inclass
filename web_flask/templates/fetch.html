@@ -1,0 +1,29 @@
+{% extends 'layout.html' %} 
+{% block page_content %}
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    This is Fetch Result 
+    {% if content %}
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h2 class="display-4">New Updates</h1>
+                <p>
+                {% for daily_data in content['items'] %}
+                    <p>
+                        <h5>Fetch Status <span class="badge {{ 'badge-success' if content['status'] == 'ok' else 'badge-warning' }}">{{ content['status'] }}</span></h5>
+                        <h5>Last Updated <span class="badge badge-secondary">{{ daily_data['date'] | strftime }}</span></h5>
+                        <h5>Total Tested <span class="badge badge-primary">{{ daily_data['total'] }}</span></h5>
+                        <h5>Resolved <span class="badge badge-success">{{ daily_data['resolved'] }}</span></h5>
+                        <h5>Under Investigation <span class="badge badge-info">{{ daily_data['pending'] }}</span></h5>
+                        <h5>Confirmed <span class="badge badge-danger progress-bar-striped">{{ daily_data['confirmed']['total'] }}</span></h5>
+                        <h5>Deceased <span class="badge badge-dark progress-bar-striped">{{ daily_data['deceased'] }}</span></h5>
+                    </p>
+                {% endfor %}
+                </p>
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="/" role="button">Check Dashboard</a>
+                </p>
+            </div>
+        </div>
+    {% endif %}
+</main>
+{% endblock %}
