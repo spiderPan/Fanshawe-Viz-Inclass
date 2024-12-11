@@ -6,7 +6,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "browser-sync": "^3.0.3",
-    "chart.js": "^2.9.2",
+    "chart.js": "^2.9.4",
     "gulp": "^5.0.0"
   }
 }
